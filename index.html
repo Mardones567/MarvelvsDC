@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Marvel vs Dc</title>
+    <style>
+      .main-panel{
+        width: 100% !important;
+      }
+
+      .table-container {
+            max-height: 250px; 
+            overflow-y: auto; 
+        }
+        .table-responsive {
+            max-height: 400px; 
+            overflow-y: auto; 
+        }
+        
+        thead th {
+            position: sticky;
+            top: 0; 
+            background-color: #f8f9fa; 
+            z-index: 100; 
+        }
+
+        .table-container table {
+          width: 100%; 
+          table-layout: fixed; 
+        }
+    </style>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="icon"
+      href="assets/img/kaiadmin/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Fonts and icons -->
+    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
+    <script>   
+        var data = JSON.parse('plot_json.txt');
+        Plotly.newPlot('myDiv', data.data, data.layout);
+        </script>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+
+      <!-- End Sidebar -->
+
+      <div class="main-panel">
+
+
+        <div class="container">
+          <div class="page-inner">
+            <div
+              class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
+            >
+              <div>
+                <h3 class="fw-bold mb-3">Marvel vs DC</h3>
+                <h6 class="op-7 mb-2">Comparativa de las series y peliculas de marvel y dc</h6>
+              </div>
+              <div class="ms-md-auto py-2 py-md-0">
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-icon">
+                        <div
+                          class="icon-big text-center icon-primary bubble-shadow-small"
+                        >
+                          <i class="fas"><img src="img_analisis/icons8-maravilla-50.png" alt=""></i>
+                        </div>
+                      </div>
+                      <div class="col col-stats ms-3 ms-sm-0">
+                        <div class="numbers">
+
+                          <p class="card-category">Numero de peliculas/series Marvel</p> 
+                          <h4 class="card-title">483</h4>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-icon">
+                        <div
+                          class="icon-big text-center icon-info bubble-shadow-small"
+                        >
+                          <i class="fas "><img src="img_analisis/pngegg (1).png" alt=""></i>
+                        </div>
+                      </div>
+                      <div class="col col-stats ms-3 ms-sm-0">
+                        <div class="numbers">
+                          <p class="card-category">Numero de peliculas/series DC</p>
+                          <h4 class="card-title">677</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-icon">
+                        <div
+                          class="icon-big text-center icon-success bubble-shadow-small"
+                        >
+                        <i class="fas "><img src="img_analisis/pngegg (1).png" alt=""></i>
+
+                        </div>
+                      </div>
+                      <div class="col col-stats ms-3 ms-sm-0">
+                        <div class="numbers">
+                          <p class="card-category">Pelicula más taquillera de DC</p>
+                          <h4 class="card-title">The Flash</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="card card-stats card-round">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-icon">
+                        <div
+                          class="icon-big text-center icon-secondary bubble-shadow-small"
+                        >
+                        <i class="fas"><img src="img_analisis/icons8-maravilla-50.png" alt=""></i>
+
+                        </div>
+                      </div>
+                      <div class="col col-stats ms-3 ms-sm-0">
+                        <div class="numbers">
+                          <p class="card-category">Pelicula más taquillera de Marvel</p>
+                          <h4 class="card-title">Agents of S.H.I.E.L.D.</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="card card-round">
+                  <div class="card-header">
+                    <div class="card-head-row">
+                      <div class="card-title">
+                        Número de pelicula y serie producida por DC y Marvel por año</div>
+                      <div class="card-tools">
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <img src="img_analisis/peliculas_por_año.png" class="img-fluid w-100 h-100" alt="">
+                    <div id="myChartLegend"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card card-primary card-round">
+                  <div class="card-header">
+                    <div class="card-head-row">
+                      <div class="card-tools">
+                        <div class="dropdown">
+
+                          <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownMenuButton"
+                          >
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#"
+                              >Something else here</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body pb-0">
+                  <h2 class="my-4">Cantidad total de peliculas/series</h2>
+                    
+                    <div class="pull-in">
+                      <img src="img_analisis/Cantidad_de_peliculas.png" class="img-fluid w-100 h-100"  alt="">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row">
+              <h2 class="my-4">Cantidad de películas y series por año</h2>
+
+
+            </div>
+            <div class="row table-responsive">
+              <table border="1" class="table table-bordered table-striped caption-top ">
+        <thead>
+          <tr style="text-align: left;">
+            <th  scope="col" style="width: 15%"">Año</th>
+            <th  scope="col" style="width: 40%">Peliculas y series DC</th>
+            <th  scope="col" style="width: 40%">Peliculas y series Marvel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1952</th>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1979</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1980</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1982</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1984</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1985</td>
+            <td>1.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>1987</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1988</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1990</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1991</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1992</td>
+            <td>86.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1994</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1996</td>
+            <td>6.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>1997</td>
+            <td>25.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1998</td>
+            <td>1.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>1999</td>
+            <td>54.0</td>
+            <td>0.0</td>
+          </tr>
+          <tr>
+            <td>2000</td>
+            <td>33.0</td>
+            <td>4.0</td>
+          </tr>
+          <tr>
+            <td>2001</td>
+            <td>2.0</td>
+            <td>121.0</td>
+          </tr>
+          <tr>
+            <td>2002</td>
+            <td>0.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>2003</td>
+            <td>12.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>2004</td>
+            <td>52.0</td>
+            <td>40.0</td>
+          </tr>
+          <tr>
+            <td>2005</td>
+            <td>23.0</td>
+            <td>11.0</td>
+          </tr>
+          <tr>
+            <td>2006</td>
+            <td>6.0</td>
+            <td>4.0</td>
+          </tr>
+          <tr>
+            <td>2007</td>
+            <td>1.0</td>
+            <td>2.0</td>
+          </tr>
+          <tr>
+            <td>2008</td>
+            <td>22.0</td>
+            <td>3.0</td>
+          </tr>
+          <tr>
+            <td>2009</td>
+            <td>5.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>2010</td>
+            <td>0.0</td>
+            <td>76.0</td>
+          </tr>
+          <tr>
+            <td>2011</td>
+            <td>0.0</td>
+            <td>3.0</td>
+          </tr>
+          <tr>
+            <td>2012</td>
+            <td>14.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>2013</td>
+            <td>2.0</td>
+            <td>95.0</td>
+          </tr>
+          <tr>
+            <td>2014</td>
+            <td>131.0</td>
+            <td>5.0</td>
+          </tr>
+          <tr>
+            <td>2015</td>
+            <td>87.0</td>
+            <td>22.0</td>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td>45.0</td>
+            <td>16.0</td>
+          </tr>
+          <tr>
+            <td>2017</td>
+            <td>4.0</td>
+            <td>13.0</td>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td>6.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td>0.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>0.0</td>
+            <td>1.0</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>7.0</td>
+            <td>0.0</td>
+          </tr>
+        </tbody>
+      </table>
+          </div>
+      
+      
+
+          </div>
+        </div>
+
+
+      </div>
+
+ 
+      <!-- End Custom template -->
+    </div>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="assets/js/plugin/jsvectormap/world.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Kaiadmin JS -->
+    <script src="assets/js/kaiadmin.min.js"></script>
+
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="assets/js/setting-demo.js"></script>
+
+  </body>
+</html>
