@@ -1,0 +1,42 @@
+[
+    {
+        "gru_edad": "0-9",
+        "total": 0
+    },
+    {
+        "gru_edad": "10-19",
+        "total": 0
+    },
+    {
+        "gru_edad": "20-29",
+        "total": 0
+    },
+    {
+        "gru_edad": "30-39",
+        "total": 0
+    },
+    {
+        "gru_edad": "40-49",
+        "total": 0
+    },
+    {
+        "gru_edad": "50-59",
+        "total": 0
+    },
+    {
+        "gru_edad": "60-69",
+        "total": 0
+    },
+    {
+        "gru_edad": "70-79",
+        "total": 0
+    },
+    {
+        "gru_edad": "80-89",
+        "total": 0
+    },
+    {
+        "gru_edad": "90+",
+        "total": 0
+    }
+]

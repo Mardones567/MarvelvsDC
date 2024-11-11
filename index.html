@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Marvel vs Dc</title>
+    <title>Muertes en chile</title>
     <style>
       .main-panel{
         width: 100% !important;
@@ -59,10 +59,8 @@
         },
       });
     </script>
-    <script>   
-        var data = JSON.parse('plot_json.txt');
-        Plotly.newPlot('myDiv', data.data, data.layout);
-        </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
@@ -80,130 +78,43 @@
       <div class="main-panel">
 
 
-        <div class="container">
+        <div class="container" style="margin-top: 0;">
           <div class="page-inner">
             <div
               class="d-flex align-items-left align-items-md-center flex-column flex-md-row pt-2 pb-4"
             >
               <div>
-                <h3 class="fw-bold mb-3">Marvel vs DC</h3>
-                <h6 class="op-7 mb-2">Comparativa de las series y peliculas de marvel y dc</h6>
+                <h3 class="fw-bold mb-3">Muertes en chile 1997-2019</h3>
+                <h6 class="op-7 mb-2">General de las muertes de chile</h6>
               </div>
               <div class="ms-md-auto py-2 py-md-0">
 
               </div>
             </div>
-            <div class="row">
-              <div class="col-sm-6 col-md-3">
-                <div class="card card-stats card-round">
-                  <div class="card-body">
-                    <div class="row align-items-center">
-                      <div class="col-icon">
-                        <div
-                          class="icon-big text-center icon-primary bubble-shadow-small"
-                        >
-                          <i class="fas"><img src="img_analisis/icons8-maravilla-50.png" alt=""></i>
-                        </div>
-                      </div>
-                      <div class="col col-stats ms-3 ms-sm-0">
-                        <div class="numbers">
 
-                          <p class="card-category">Numero de peliculas/series Marvel</p> 
-                          <h4 class="card-title">483</h4>
-                        
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3">
-                <div class="card card-stats card-round">
-                  <div class="card-body">
-                    <div class="row align-items-center">
-                      <div class="col-icon">
-                        <div
-                          class="icon-big text-center icon-info bubble-shadow-small"
-                        >
-                          <i class="fas "><img src="img_analisis/pngegg (1).png" alt=""></i>
-                        </div>
-                      </div>
-                      <div class="col col-stats ms-3 ms-sm-0">
-                        <div class="numbers">
-                          <p class="card-category">Numero de peliculas/series DC</p>
-                          <h4 class="card-title">677</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3">
-                <div class="card card-stats card-round">
-                  <div class="card-body">
-                    <div class="row align-items-center">
-                      <div class="col-icon">
-                        <div
-                          class="icon-big text-center icon-success bubble-shadow-small"
-                        >
-                        <i class="fas "><img src="img_analisis/pngegg (1).png" alt=""></i>
-
-                        </div>
-                      </div>
-                      <div class="col col-stats ms-3 ms-sm-0">
-                        <div class="numbers">
-                          <p class="card-category">Pelicula más taquillera de DC</p>
-                          <h4 class="card-title">The Flash</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-3">
-                <div class="card card-stats card-round">
-                  <div class="card-body">
-                    <div class="row align-items-center">
-                      <div class="col-icon">
-                        <div
-                          class="icon-big text-center icon-secondary bubble-shadow-small"
-                        >
-                        <i class="fas"><img src="img_analisis/icons8-maravilla-50.png" alt=""></i>
-
-                        </div>
-                      </div>
-                      <div class="col col-stats ms-3 ms-sm-0">
-                        <div class="numbers">
-                          <p class="card-category">Pelicula más taquillera de Marvel</p>
-                          <h4 class="card-title">Agents of S.H.I.E.L.D.</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="row">
               <div class="col-md-8">
                 <div class="card card-round">
                   <div class="card-header">
                     <div class="card-head-row">
                       <div class="card-title">
-                        Número de pelicula y serie producida por DC y Marvel por año</div>
+                        Cantidad de muertes por grupo de edad 1997-2019</div>
                       <div class="card-tools">
-                       
+                       <br>
+                       <span>click sobre las barras para escuchar</span>
                       </div>
                     </div>
                   </div>
                   <div class="card-body">
-                    <img src="img_analisis/peliculas_por_año.png" class="img-fluid w-100 h-100" alt="">
+                    <canvas id="graph"></canvas>
                     <div id="myChartLegend"></div>
                   </div>
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="card card-primary card-round">
-                  <div class="card-header">
+                <div class="card card-primary card-round" style="background-color: #ffff !important;">
+                  <div class="card-header" style="display: none;">
+                    
                     <div class="card-head-row">
                       <div class="card-tools">
                         <div class="dropdown">
@@ -223,11 +134,14 @@
                     </div>
                   </div>
                   <div class="card-body pb-0">
-                  <h2 class="my-4">Cantidad total de peliculas/series</h2>
+                  <h3 class="my-4" style="color: black;">Relación por cantidad de muertes por sexo.</h3>
+                
+                  <span style="color: black;">click sobre los puntos para escuchar</span>
+
                     
-                    <div class="pull-in">
-                      <img src="img_analisis/Cantidad_de_peliculas.png" class="img-fluid w-100 h-100"  alt="">
-                    </div>
+                 
+                    <canvas id="grafico_sexo_ano"></canvas>
+               
                   </div>
                 </div>
 
@@ -235,213 +149,11 @@
             </div>
 
             <div class="row">
-              <h2 class="my-4">Cantidad de películas y series por año</h2>
-
+              <h2 class="my-4">Tendencia de muertes por grupo de enfermedades 1997-2019</h2>
+              <canvas id="grafico_tendencias"></canvas>
 
             </div>
-            <div class="row table-responsive">
-              <table border="1" class="table table-bordered table-striped caption-top ">
-        <thead>
-          <tr style="text-align: left;">
-            <th  scope="col" style="width: 15%"">Año</th>
-            <th  scope="col" style="width: 40%">Peliculas y series DC</th>
-            <th  scope="col" style="width: 40%">Peliculas y series Marvel</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1952</th>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1979</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1980</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1982</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1984</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1985</td>
-            <td>1.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>1987</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1988</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1990</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1991</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1992</td>
-            <td>86.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1994</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1996</td>
-            <td>6.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>1997</td>
-            <td>25.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1998</td>
-            <td>1.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>1999</td>
-            <td>54.0</td>
-            <td>0.0</td>
-          </tr>
-          <tr>
-            <td>2000</td>
-            <td>33.0</td>
-            <td>4.0</td>
-          </tr>
-          <tr>
-            <td>2001</td>
-            <td>2.0</td>
-            <td>121.0</td>
-          </tr>
-          <tr>
-            <td>2002</td>
-            <td>0.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>2003</td>
-            <td>12.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>2004</td>
-            <td>52.0</td>
-            <td>40.0</td>
-          </tr>
-          <tr>
-            <td>2005</td>
-            <td>23.0</td>
-            <td>11.0</td>
-          </tr>
-          <tr>
-            <td>2006</td>
-            <td>6.0</td>
-            <td>4.0</td>
-          </tr>
-          <tr>
-            <td>2007</td>
-            <td>1.0</td>
-            <td>2.0</td>
-          </tr>
-          <tr>
-            <td>2008</td>
-            <td>22.0</td>
-            <td>3.0</td>
-          </tr>
-          <tr>
-            <td>2009</td>
-            <td>5.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>2010</td>
-            <td>0.0</td>
-            <td>76.0</td>
-          </tr>
-          <tr>
-            <td>2011</td>
-            <td>0.0</td>
-            <td>3.0</td>
-          </tr>
-          <tr>
-            <td>2012</td>
-            <td>14.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>2013</td>
-            <td>2.0</td>
-            <td>95.0</td>
-          </tr>
-          <tr>
-            <td>2014</td>
-            <td>131.0</td>
-            <td>5.0</td>
-          </tr>
-          <tr>
-            <td>2015</td>
-            <td>87.0</td>
-            <td>22.0</td>
-          </tr>
-          <tr>
-            <td>2016</td>
-            <td>45.0</td>
-            <td>16.0</td>
-          </tr>
-          <tr>
-            <td>2017</td>
-            <td>4.0</td>
-            <td>13.0</td>
-          </tr>
-          <tr>
-            <td>2018</td>
-            <td>6.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>2019</td>
-            <td>0.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>2020</td>
-            <td>0.0</td>
-            <td>1.0</td>
-          </tr>
-          <tr>
-            <td>2021</td>
-            <td>7.0</td>
-            <td>0.0</td>
-          </tr>
-        </tbody>
-      </table>
-          </div>
+          
       
       
 
@@ -458,7 +170,7 @@
     <script src="assets/js/core/jquery-3.7.1.min.js"></script>
     <script src="assets/js/core/popper.min.js"></script>
     <script src="assets/js/core/bootstrap.min.js"></script>
-
+    <script src="main.js"></script>
     <!-- jQuery Scrollbar -->
     <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 
