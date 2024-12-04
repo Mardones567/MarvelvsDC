@@ -59,7 +59,10 @@
         },
       });
     </script>
+ 
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -93,7 +96,7 @@
             </div>
 
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-12">
                 <div class="card card-round">
                   <div class="card-header">
                     <div class="card-head-row">
@@ -101,7 +104,7 @@
                         Cantidad de muertes por grupo de edad 1997-2019</div>
                       <div class="card-tools">
                        <br>
-                       <span>click sobre las barras para escuchar</span>
+                       <span style="border: 2px solid red; padding: 5px;color:black;">click sobre las barras para escuchar</span>
                       </div>
                     </div>
                   </div>
@@ -111,7 +114,10 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+
+            </div>
+            <div class="row">
+              <div class="col-md-12">
                 <div class="card card-primary card-round" style="background-color: #ffff !important;">
                   <div class="card-header" style="display: none;">
                     
@@ -136,7 +142,7 @@
                   <div class="card-body pb-0">
                   <h3 class="my-4" style="color: black;">Relación por cantidad de muertes por sexo.</h3>
                 
-                  <span style="color: black;">click sobre los puntos para escuchar</span>
+                  <span style="border: 2px solid red; padding: 5px;color:black;">click sobre los puntos para escuchar</span>
 
                     
                  
@@ -147,13 +153,29 @@
 
               </div>
             </div>
-
             <div class="row">
               <h2 class="my-4">Tendencia de muertes por grupo de enfermedades 1997-2019</h2>
+              <span style="border: 2px solid red; padding: 5px;color:black;">Haga click sobre los puntos para escuchar</span>
               <canvas id="grafico_tendencias"></canvas>
 
             </div>
-          
+            <div class="row">
+                <!-- Filtros -->
+<label for="sexo">Selecciona Sexo:</label>
+<select id="sexo" onchange="updateGroupedChart()">
+    <option value="Mujer">Mujer</option>
+    <option value="Hombre">Hombre</option>
+    <option value="Todos">Todos</option>
+</select>
+
+<label for="ano">Selecciona Año:</label>
+<select id="ano" onchange="updateGroupedChart()">
+    <!-- Agregar los años disponibles dinámicamente aquí -->
+</select>
+
+<!-- Gráfico -->
+<canvas id="graph_filtro"></canvas>
+            </div>
       
       
 

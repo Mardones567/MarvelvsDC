@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "firmata": "^2.3.0",
+    "johnny-five": "^2.1.0",
+    "serialport": "^10.5.0",
+    "socket.io": "^4.8.1"
+  },
+  "name": "marvelvsdc",
+  "version": "1.0.0",
+  "description": "![kaiadminlitethumb (1)](https://github.com/Hizrian/kaiadmin-lite/assets/10692084/4793c6b9-7991-4502-8633-14d9ed0ea486)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
