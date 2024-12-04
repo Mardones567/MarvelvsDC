@@ -4,10 +4,10 @@ let maxVolume = 5
 let minVolume = 0.1
 
 async function loadData() {
-    const response = await fetch('/datos/mortalidad_grouped_data.json');
-    const response2 = await fetch('/datos/defunciones_sexo_ano.json');
-    const response3 = await fetch('/datos/tendencia_grupos_enfermedades.json');
-    const response4 = await fetch('/datos/datos_grouped.json');
+    const response = await fetch('datos/mortalidad_grouped_data.json');
+    const response2 = await fetch('datos/defunciones_sexo_ano.json');
+    const response3 = await fetch('datos/tendencia_grupos_enfermedades.json');
+    const response4 = await fetch('datos/datos_grouped.json');
 
     
     const data = await response.json();
