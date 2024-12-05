@@ -246,7 +246,7 @@ function createChart_3(data) { const ctx = document.getElementById("grafico_tend
 // Reproducir sonidos y ajustar velocidad del servo
 function playSound(value, value_volumen) {
     // Lógica para reproducir el sonido
-    const sound = new Audio('sfx-horror.mp3');
+    const sound = new Audio('Audio de WhatsApp 2024-12-04 a las 21.02.19_c63444cf.mp3');
     sound.volume = Math.min(Math.max(value_volumen / 1000, 0), 1);
     sound.play();
 
